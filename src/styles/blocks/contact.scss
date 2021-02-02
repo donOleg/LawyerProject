@@ -1,0 +1,99 @@
+.section_contact {
+  position: relative;
+  @include desktop_s {
+    padding-top: 80px;
+  }
+  h2 {
+    text-align: left;
+    margin-bottom: 0;
+    padding: 20px 0 20px 15%;
+    @include desktop_mini {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+.contact_content {
+  display: flex;
+  flex-wrap: wrap;
+  @include desktop_mini {
+    flex-direction: column;
+  }
+}
+.contact_map {
+  width: 64%;
+  @include desktop_mini {
+    width: 100%;
+  }
+}
+.map_wrap {
+  width: 100%;
+  height: 460px;
+  @include tablets {
+    height: 300px;
+  }
+}
+.contact_info {
+  width: 36%;
+  padding: 40px 50px;
+  background-color: #525252;
+  background-image: url("../img/square_line.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  @include desktop_sm {
+    padding: 40px 20px;
+  }
+  @include desktop_mini {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+  }
+  @include phones {
+    align-items: flex-start;
+  }
+}
+.logo_contact {
+  margin-bottom: 70px;
+  @include tablets {
+    margin-bottom: 20px;
+  }
+}
+.contact_descr {
+  margin-bottom: 50px;
+  @include tablets {
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 10px;
+    color: #BFBFBF;
+    padding-left: 35px;
+  }
+  .mail_link {
+    @include desktop_s {
+      border-bottom: none;
+    }
+  }
+}
+.address_text {
+  position: relative;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1;
+	.icon {
+		width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 5px;
+		margin-right: 10px;
+		background-image: url("../img/map_icon_black.png");
+		background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+	}
+}

@@ -1,0 +1,119 @@
+.section_idea {
+  position: relative;
+  margin-bottom: 70px;
+  padding-top: 100px;
+}
+.idea_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.idea_list_item {
+  width: 48%;
+  @include desktop_mini {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.idea_box_link {
+  display: block;
+  height: 100%;
+  &:hover {
+    .idea_box {
+      box-shadow: 0 0px 10px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+.idea_box {
+  height: 100%;
+  position: relative;
+  background: #fff;
+  border: 1px solid #c5c5c5;
+  border-top: 3px solid #525252;
+  padding: 40px;
+  @include phones {
+    padding: 15px;
+  }
+  &::before {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    z-index: -1;
+    height: 20%;
+    max-height: 100px;
+    max-width: 460px;
+    width: 60%;
+    content: "";
+    opacity: 0.7;
+    box-shadow: 0 17px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  &::after {
+    position: absolute;
+    bottom: 15px;
+    left: auto;
+    right: 10px;
+    z-index: -1;
+    height: 20%;
+    max-height: 100px;
+    max-width: 460px;
+    width: 60%;
+    content: "";
+    opacity: 0.7;
+    box-shadow: 0 17px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
+.idea_title {
+  margin-bottom: 30px;
+  p {
+    text-align: right;
+    font-weight: bold;
+  }
+}
+.idea_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  p {
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+}
+.section_card {
+  max-width: 1000px;
+  position: relative;
+  padding-top: 130px;
+  margin: 0 auto 70px;
+}
+.idea_card_list {
+  padding-left: 30px;
+  counter-reset: numm; 
+  list-style-type: none;
+  li {
+    display: flex;
+    align-items: baseline;
+    &:before {
+      counter-increment: numm;
+      content: counter(numm) "";
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+  }
+}
+.read_more {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  color: #525252;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.down_div {
+  margin-top: 20px;
+}

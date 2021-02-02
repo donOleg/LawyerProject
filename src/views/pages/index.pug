@@ -1,0 +1,249 @@
+extends ../main-layout
+
+block title
+	| Главная
+
+block content
+	header.header
+		.container_inner
+			.header_inner
+				.logo
+					a.logo_link(href="/")
+						img(src="img/logo.png", alt="Logo")
+				.menu_trigger.menuTrigger
+					span.menu_trigger_decor
+				.menu_nav
+					ul.menu_list
+						li.menu_list_item
+							a.menu_list_link(href="#about") Про себе
+						li.menu_list_item
+							a.menu_list_link(href="#services") Послуги
+						li.menu_list_item
+							a.menu_list_link(href="#myidea") Моя думка
+						li.menu_list_item
+							a.menu_list_link(href="#reviews") Відгуки
+						li.menu_list_item
+							a.menu_list_link(href="#contact") Контакты
+					a.mail_link(href="mailto:tetyana_sergienko@ukr.net") 
+						span.icon
+						| sergienko_tetyana@ukr.net
+					a.phone_link(href="tel:+380959238434") 
+						span.icon
+						| +38 095 923 84 34
+
+	.banner
+		
+	section.section_hero
+		.hero_inner
+			.container_inner
+				h1 Адвокатське бюро
+				.hero_title
+					p "Тетяни Сергієнко"
+		a(href="#about").main_btn 
+			span Докладніше
+
+	section.section_about#about
+		.container_inner
+			h2 Про себе
+			.about_inner
+				.about_col.about_col_img
+					img(src="img/my_foto.jpg", alt="About")
+					//- img(src="http://placehold.it/500x600", alt="About")
+				.about_col.about_col_text
+					p
+						| Вітаю!
+					p
+						| Я, Сергієнко Тетяна Григорівна, відповідно до Закону України «Про адвокатуру та 
+						| адвокатську діяльність» здійснюю свою адвокатську діяльність у формі адвокатського 
+						| бюро, що створене мною 29 липня 2020 року. Маю стаж роботи у галузі права понад 15 років, 
+						| два останні з яких  я займаюсь наданням професійної правничої допомоги, згідно свідоцтва 
+						| про право на заняття адвокатською діяльністю № 2507, що видане 10 січня 2019 року 
+						| Радою адвокатів Полтавської області
+					p
+						| Свою трудову діяльність розпочала ще в 2005 році з посади юрисконсульта у одному з місцевих 
+						| банків Полтави. Потім працювала на різних підприємствах, установах, організаціях, 
+						| громадській організації, юридичній компанії, тощо.
+					p
+						| Фактично з 2011 року займаюсь наданням правової допомоги індивідуально та в складі юридичних 
+						| компаній. Рада тому, що маю у своєму активі друзів - колег, яких з радістю залучаю до спільної праці над справами.
+					p
+						| Своєю спеціалізацією визначаю передусім цивільні справи, господарські, в тому числі  справи 
+						| про банкрутство юридичних та фізичних осіб, та адміністративні справи, що включає досить великий 
+						| сегмент на ринку права.
+					p
+						| Це вплинуло на досить значний багаж досвіду та знань з різних питань, 
+						| що виникають в житті людини, від захисту права власності до корпоративних спорів, від стягнення 
+						| заробітної плати до визнання договору оренди землі недійсним, тощо.
+					p
+						| Не хочу говорити про поразки та перемоги, їх кількісний  та порівняльний склад. Це питанн
+						| я для мене є більш риторичним, ніж здається на перший погляд. Адже перемога чи поразка не 
+						| свідчить про рівень підготовки адвоката в конкретній справі чи його професійний рівень 
+						| в цілому. Це багатоаспектне питання юридичної визначеності та правової позиції в цілому. 
+						| Проте, з впевненістю можу сказати, що ніколи не відмовляю своїм клієнтам в допомозі та 
+						| намагаюсь знайти вихід навіть в безнадійних ситуаціях. 
+					p
+						| Я маю багато вдячних клієнтів, - і це найбільше моє досягнення. Моя професійна діяльність 
+						| певною мірою впливає на правозастосовну  практику та є частиною творення  нової, якісної  
+						| та чесної діяльності адвокатури сьогодення. 
+					p
+						| З повагою, Т. Сергієнко
+
+	section.section_services#services
+		.container_inner
+			.services_content
+				.services_box
+					ul.services_list
+						li.services_item
+							.services_img
+								img(src="img/services01.png", alt="About")
+							.services_text
+								p Консультації 
+							button(type="button" data-toggle="modal" data-target="#orderMaster01").services_btn Докладніше
+						li.services_item
+							.services_img
+								img(src="img/services02.png", alt="About")
+							.services_text
+								p Складання документів
+							button(type="button" data-toggle="modal" data-target="#orderMaster02").services_btn Докладніше
+						li.services_item
+							.services_img
+								img(src="img/services03.png", alt="About")
+							.services_text
+								p Представництво інтересів
+							button(type="button" data-toggle="modal" data-target="#orderMaster03").services_btn Докладніше
+				.services_descr
+					h2 Послуги
+
+	section.section_form
+		.container_inner
+			h2 Ваша заявка
+			.form_wrap
+				form
+					.form_row
+						.form_half
+							.form_field
+								input.form_input(type="text" placeholder="Прізвище")
+						.form_half
+							.form_field
+								input.form_input(type="text" placeholder="Ім'я")
+					.form_row
+						.form_field
+							input.form_input(type="email" placeholder="Електронна пошта")
+					.form_row
+						.form_field
+							input.form_input(type="tel" placeholder="Телефон")
+					.form_row
+						textarea.form_textarea(placeholder="Ваше питання")
+					.form_row
+						button.btn_submit(type="submit") Відправити
+					
+	section.section_reviews#reviews
+		.container_inner
+			h2 Відгуки
+			.reviews_slide
+				.reviews_item
+					.reviews_item_inner
+						p
+							| З Тетяною Григоріївною, працюю вже давно. Знаю її як відповідальну та наполегливу людину. 
+							| Як громадський радник та голова ОСН звертаюсь до неї з різних питань і вона завжди  доводить 
+							| справи до кінця. Є багато успішних кейсів,бо ця адвокатка прикладає максимум зусиль для захисту своїх клієнтів.
+						.reviews_human
+							.reviews_human_name
+								p Карпова Лариса
+							//- .reviews_human_title
+							//- 	p Сео Специалист
+							.reviews_human_foto
+								img(src="img/female_icon.png", alt="Reviews foto")
+				.reviews_item
+					.reviews_item_inner
+						p
+							| Рекомендую адвоката  Сергеенко Т.Г.!! <br/> Высокая экспертность, порядочность, умение оказывать 
+							| влияние  а самое главное выслушать и здраво рассудить- это те качества, которые проявила 
+							| адвокат Татьяна Григорьевна в процессе слушания моего дела. Наша семья очень ей благодарна 
+							| и рекомендуем её как порядочного и опытного адвоката всем, кто нуждается в качественной адвокатской помощи.
+						.reviews_human
+							.reviews_human_name
+								p Філоненко Людмила
+							//- .reviews_human_title
+							//- 	p Сео Специалист
+							.reviews_human_foto
+								img(src="img/female_icon.png", alt="Reviews foto")
+				.reviews_item
+					.reviews_item_inner
+						p
+							| Грамотный, профессиональный адвокат! <br/> Хорошо знает законы, гибко и с умом  найдет 
+							| выход из любой сложившийся ситуации. Очень порядочный человек, чуткий и 
+							| отзывчивый. Лично я могу доверять Татьяне любое, важное для меня дело. Она 
+							| помогла в борьбе с банком, сделала все возмовжное, чтобы я сохранила свою 
+							| квартиру и выиграла еще два других дела. Отличные впечатления от сотрудничества.
+						.reviews_human
+							.reviews_human_name
+								p Михайленко Ірина
+							//- .reviews_human_title
+							//- 	p Сео Специалист
+							.reviews_human_foto
+								img(src="img/male_icon.png", alt="Reviews foto")
+
+	section.section_idea#myidea
+		.container_inner
+			h2 Моя думка
+			ul.idea_list
+				li.idea_list_item
+					a(href="idea01.html").idea_box_link
+						.idea_box
+							.idea_content
+								h4 Нотаріус чи суд, ось в чому питання? 
+								.idea_title
+									p
+										| або  «Проблемні аспекти при оформленні спадщини на земельну ділянку за 
+										| Державним актом про право власності на землю старого зразка»
+								p
+									| Як правило зі словом «СУД» у більшості громадян нашої країни асоціюються 
+									| вкрай неприємні емоції - страх, відчай і безвихідь.  Ми на ментальному рівні 
+									| відносимось до даного інституту та гілки влади так, що до суду  звикли йти в 
+									| останню чергу, вичерпавши всі можливі варіанти вирішення питання, та при 
+									| недосягненні з кимось консенсусу, що є по суті логічним та розумним підходом 
+									| з точки зору правосуддя та його призначення.
+								span.read_more Читати повністю
+				li.idea_list_item
+					a(href="idea02.html").idea_box_link
+						.idea_box
+							.idea_content
+								h4 
+									| Електронні торги, як дієвий механізм отримати бажане дешево і сердито, 
+									| або відсутність ефективного способу захисту прав боржника у виконавчому провадженні
+								p
+									| Якщо ви боржник, бійтеся електронних торгів, та вправно використовуйте той 
+									| невеликий арсенал способів захисту, який пропонує вам чинне законодавство 
+									| України. Інакше, можете отримати дуже невтішний результат від продажу вашого 
+									| майна за вкрай низькою ціною, яка навіть не покриє розміру боргу. 
+								span.read_more Читати повністю
+
+
+
+	section.section_contact#contact
+		.contact_content
+			.contact_map
+				h2 Контакти
+				.map_wrap
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.5445162106075!2d34.557287015872824!3d49.58748025704671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825f5448f0ddb%3A0x6cdfe31049797186!2z0YPQuy4g0JPQvtCz0L7Qu9GPLCA3LCDQn9C-0LvRgtCw0LLQsCwg0J_QvtC70YLQsNCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDM2MDAw!5e0!3m2!1sru!2sua!4v1604412563713!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			.contact_info
+				.logo_contact
+					a.logo_link(href="/")
+						img(src="img/logo.png", alt="Logo")
+				.contact_descr
+					.title Адреса
+					p.address_text
+						span.icon
+						| Полтава, вул. Гоголя 7, офіс 205
+				.contact_descr
+					.title Email
+					a.mail_link.mail_link_mod(href="mailto:tetyana_sergienko@ukr.net") 
+						span.icon
+						| sergienko_tetyana@ukr.net
+				.contact_descr
+					.title Телефон
+					a.phone_link.phone_link_mod(href="tel:+380959238434") 
+						span.icon
+						| +38 095 923 84 34
+		

@@ -1,0 +1,202 @@
+.section_form {
+  position: relative;
+  padding: 100px 0;
+  // margin-bottom: 80px;
+  background-image: url("../img/bg_img.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  // background-size: cover;
+  z-index: 2;
+  @include tablets {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+}
+.form_wrap {
+  width: 900px;
+  @include desktop_mini {
+    width: 100%;
+  }
+}
+.form_row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+  &:first-child {
+    @include phones {
+      margin-bottom: 0;
+    }
+  }
+}
+.form_half {
+  width: 49%;
+  @include phones {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+}
+.form_field {
+  width: 100%;
+}
+.form_input {
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  font-style: italic;
+  border: 1px solid #9A9A9A;
+  background-color: #fff;
+  padding: 0 15px;
+  &:focus {
+    outline: transparent;
+  }
+}
+.form_textarea {
+  width: 100%;
+  height: 170px;
+  color: rgb(153, 153, 153);
+  font-size: 16px;
+  font-style: italic;
+  border: 1px solid #9A9A9A;
+  background-color: #fff;
+  padding: 15px;
+  resize: none;
+  &:focus {
+    outline: transparent;
+  }
+}
+.form_input[placeholder] {
+  color:#999; 
+  font-size: 16px; 
+  @include phones {
+    font-size: 12px;
+  }
+}
+.form_input::-webkit-input-placeholder {
+  color:#999; 
+  font-size: 16px; 
+  @include phones {
+    font-size: 12px;
+  }
+}
+.form_input::-moz-placeholder          {color:#999; font-size: 16px;}
+.form_input:-moz-placeholder           {color:#999; font-size: 16px;}
+.form_input:-ms-input-placeholder      {color:#999; font-size: 16px;}
+
+.form_textarea::-webkit-input-placeholder {
+  color:#999; 
+  font-size: 16px; 
+  @include phones {
+    font-size: 12px;
+  }
+}
+.form_textarea::-moz-placeholder          {color:#999; font-size: 16px;}
+.form_textarea:-moz-placeholder           {color:#999; font-size: 16px;}
+.form_textarea:-ms-input-placeholder      {color:#999; font-size: 16px;}
+
+.checkbox_wrap {
+  display: flex;
+}
+.form_checkbox {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin-right: 10px;
+  background-color: #F7F7F7;
+  border: 1px solid #6D6D6D;
+  cursor: pointer;
+  &.checked {
+    .jq-checkbox__div {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 2px;
+      left: 2px;
+      background-color: #1ca580;
+    }
+  }
+}
+.checkbox_label {
+  font-size: 13px;
+  color: #232323;
+  line-height: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  @include desktop_sm {
+    color: #1ca580;
+    font-weight: 500;
+    text-shadow: 0 0 0 #000;
+  }
+}
+.btn_submit {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  // background: linear-gradient(90deg, #1C96A5 0%, #1CA67A 100%), #FFFFFF;
+  background: linear-gradient(90deg, #5b5b5b 0%, #aaa 100%), #FFFFFF;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  @include phones {
+    height: 50px;
+    font-size: 15px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -68px;
+    width: 136px;
+    height: 2px;
+    background-color: #fff;
+    @include phones {
+      top: 10px;
+      margin-left: -60px;
+      width: 120px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    left: -10px;
+    bottom: -10px;
+    width: 102%;
+    height: 83px;
+    background-image: url("../img/btn_line_big.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    @include phones_lg {
+      display: none;
+    }
+  }
+  &:hover {
+    box-shadow: none;
+    background: linear-gradient(90deg, #aaa 0%, #5b5b5b 100%), #FFFFFF;
+  }
+}
+
+.form_button {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  background: linear-gradient(90deg, #525252 0%, #aaa 100%), #FFFFFF;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translate(0, -5px);
+    transition: all 0.3s ease-in-out;
+  }
+}

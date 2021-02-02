@@ -1,0 +1,81 @@
+.section_about {
+  position: relative;
+  margin-bottom: 50px;
+  padding-top: 80px;
+  // @include tablets {
+  //   margin-bottom: 30px;
+  // }
+  h2 {
+    // text-align: center;
+    // position: absolute;
+    // top: 100px;
+    // left: 50%;
+    // color: #fff;
+    // transform: translate(-50%, 0);
+    @include tablets {
+      // position: relative;
+      // color: #000;
+      // top: 0;
+      // left: auto;
+      // transform: translate(0);
+      // text-align: center;
+    }
+  }
+}
+.about_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about_col_img {
+  position: relative;
+  flex: 0 0 450px;
+  height: 600px;
+  @include desktop_middle {
+    flex: 0 0 400px;
+    height: 529px;
+  }
+  @include desktop_sm {
+    flex: 0 0 350px;
+    height: 466px;
+  }
+  @include tablets {
+    margin-bottom: 25px;
+  }
+  @include phones {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.1);
+    z-index: 2;
+  }
+  img {
+    width: 100%;
+  }
+}
+.about_col_text {
+  width: calc(100% - 450px);
+  padding-left: 25px;
+  @include desktop_middle {
+    width: calc(100% - 400px);
+  }
+  @include desktop_sm {
+    width: calc(100% - 350px);
+  }
+  @include tablets {
+    padding: 0;
+    width: 100%;
+  }
+  p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+}
