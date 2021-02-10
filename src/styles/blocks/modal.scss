@@ -48,6 +48,10 @@
     position: relative;
     padding: 0 40px 30px 40px;
 
+    @include tablets {
+        padding: 0 20px 30px 20px;
+    }
+
     @include phones {
         padding: 0 15px 20px 15px;
     }

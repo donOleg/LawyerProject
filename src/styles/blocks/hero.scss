@@ -124,17 +124,16 @@ h4 {
   border: none;
   box-sizing: border-box;
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
-  z-index: 2;
-  @include phones_lg {
-    width: 400px;
-    margin-left: -200px;
+  z-index: 2;  
+  @include tablets {
+    width: 380px;
+    height: 70px;
+    margin-left: -190px;
   }
   @include phones {
-    width: 280px;
+    width: 260px;
     height: 50px;
-    margin-left: -140px;
-    font-size: 15px;
-    bottom: -25px;
+    margin-left: -130px;
   }
   span {
     position: relative;
@@ -143,6 +142,12 @@ h4 {
     font-size: 20px;
     text-transform: uppercase;
     z-index: 2;
+    @include tablets {
+      font-size: 18px;
+    }
+    @include phones {
+      font-size: 15px;
+    }
   }
   &:hover {
     background: linear-gradient(90deg, #525252 0%, #aaa 100%), #FFFFFF;
@@ -166,8 +171,12 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
-    @include phones_lg {
-      display: none;
+    @include tablets {
+      width: 400px;
+      background-size: contain;
+    }
+    @include phones {
+      width: 280px;
     }
   }
   &:after {
@@ -180,6 +189,9 @@ h4 {
     height: 2px;
     background-color: #aaa;
     z-index: 2;
+    @include tablets {
+      top: 16px;
+    }
     @include phones {
       top: 10px;
       margin-left: -60px;
