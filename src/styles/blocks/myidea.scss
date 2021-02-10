@@ -2,6 +2,9 @@
   position: relative;
   margin-bottom: 70px;
   padding-top: 100px;
+  @include tablets {
+    margin-bottom: 0;
+  }
 }
 .idea_list {
   display: flex;
